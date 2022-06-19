@@ -58,19 +58,37 @@ img {
 }
 
 .ear {
-    border: 1px solid lightcoral;
+    border: 1px solid red;
+    width: 90px;
+    height: 90px;
     position: absolute;
-    width: 100px;
-    height: 80px;
     left: 50%;
-    top: 100px;
+    top: 130px;
+    margin-left: -50px;
 }
 
 .ear.left {
-    border: 1px solid lightcoral;
-    position: relative;
-    width: 100px;
-    height: 80px;
-    right: 50%;
-    top: 100px;
+    transform: translateX(-100px);
+}
+
+.ear.right {
+    transform: translateX(120px);
+    margin-top: -10px;
+}
+
+.eye {
+    border: 1px solid red;
+    width: 86px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 220px;
+}
+
+.eye.left {
+    transform: translateX(-106px);
+}
+
+.eye.right {
+    transform: translateX(30px);
 }
