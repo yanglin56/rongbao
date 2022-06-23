@@ -184,4 +184,4 @@ var player = {
 
 player.init();
 },{"./css.js":"K4Xi"}]},{},["HdJB"], null)
-//# sourceMappingURL=dist/test.715b1d94.map
+//# sourceMappingURL=test.715b1d94.map
