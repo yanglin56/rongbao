@@ -1,19 +1,25 @@
 const string = `/*
+* 今天需要一只大熊猫
 * 首先，设置下居住环境
 */
-. rongbao * {
+.rongbao * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-. rongbao *::before,
-. rongbao *::after {
+.rongbao *::before,
+.rongbao *::after {
     box-sizing: border-box;
 }
+.rongbao {
+    animation: shake 1s  ease-in-out;
+    infinite
+}
+
 /*
 * 再来一个护眼色
 */
-body {
+ body {
     background: #dfe1b4; 
 }
 /*
@@ -44,6 +50,8 @@ body {
     margin-left: -6px;
     border-radius: 0px 0px 25px 25px;
     z-index: 4;
+    animation: wave 300ms infinite linear;
+    transform-origin:50% 100%;
 }
 
 .yuan {
@@ -422,11 +430,24 @@ body {
     transform: translate(185px) rotate(188deg);
     margin-top: -54px;
 }
+@keyframes wave {
+    0% {transform: rotate(0deg);}
+    33% {transform: rotate(5deg);}
+    66% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+}
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(+2px, 0, 0); }
+    30%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(+4px, 0, 0); }
+    50% { transform: translate3d(-4px, 0, 0); }
+}
 /*
-好了，送您一只天才小熊猫呀
-ˁ῁̭ˀˁ῁̮ˀˁ῁̱ˀˁ῁̥ˀˁ῁̼ˀˁ῁̩ˀˁ῁̬ˀ ʕ•̫͡•ོʔ•̫͡•ཻʕ•̫͡•ʔ•͓͡•ʔ
-祝您平安喜乐
-ヾ(￣▽￣)Bye~Bye~
+* 好了，送您一只蓉宝
+* ˁ῁̭ˀˁ῁̮ˀˁ῁̱ˀˁ῁̥ˀˁ῁̼ˀˁ῁̩ˀˁ῁̬ˀ ʕ•̫͡•ོʔ•̫͡•ཻʕ•̫͡•ʔ•͓͡•ʔ
+* 祝您平安喜乐
+* ヾ(￣▽￣)Bye~Bye~
 */
 `
 export default string;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-    <title>测试页面</title>
+    <title>天才小熊猫</title>
 </head>
 
 <body>
@@ -97,7 +97,9 @@
     <div id="html">
         <div class="rongbao">
             <div class="head"></div>
-            <div class="ear left"></div>
+            <div class="ear left">
+
+            </div>
             <div class="ear right"></div>
             <div class="eye left"></div>
             <div class="eye right"></div>
@@ -124,7 +126,33 @@
             </div>
         </div>
     </div>
-    <script src="test.715b1d94.js"></script>
+    <script src="/test.66eb59c0.js"></script>
+    <script>
+        function shake(elemId) {
+            let elem = document.getElementById(elemId)
+            if (elem) {
+                elem.classList.add('shake')
+                setTimeout(() => {
+                    elem.classList.remove('shake')
+                }, 800)
+            }
+        }
+
+        function check() {
+            // validate form data
+            if (login_form.username.value.length === 0) {
+                // the length of username must be greater than 0
+                shake('username')
+                return false
+            }
+            if (login_form.password.value.length < 6) {
+                // the length of password must be greater than 6
+                shake('password')
+                return false
+            }
+            return true
+        }
+    </script>
 </body>
 
 </html>
